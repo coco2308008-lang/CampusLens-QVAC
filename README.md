@@ -104,3 +104,8 @@ pm start.
 The application uses loadModel() to load the local model and completion() to generate the analysis. unloadModel() is used when the server shuts down.
 
 The AI inference is performed locally by QVAC. No cloud AI inference API is used.
+
+## Submission Demo
+
+For the challenge demo, use the included sample-notice.txt file. The visible AI result should show the Summary, Important Dates, Action Items, and Quick Quiz sections.
+
