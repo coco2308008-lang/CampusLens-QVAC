@@ -89,3 +89,18 @@ An internet connection may be needed initially to download the QVAC model. This 
 ## License
 
 MIT
+
+## Demo Workflow
+
+1. Start the app with 
+pm start.
+2. Open http://localhost:3000.
+3. Click **Load Sample Notice**.
+4. Click **Analyze with Local AI**.
+5. QVAC generates a summary, important dates, action items, and a quick quiz.
+
+### QVAC Inference
+
+The application uses loadModel() to load the local model and completion() to generate the analysis. unloadModel() is used when the server shuts down.
+
+The AI inference is performed locally by QVAC. No cloud AI inference API is used.
