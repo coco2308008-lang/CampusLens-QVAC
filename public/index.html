@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusLens AI — Local QVAC</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="container">
+    <header class="hero">
+      <div class="pill">⚡ QVAC • ON-DEVICE AI</div>
+      <h1>CampusLens <span>AI</span></h1>
+      <p>Turn college notices into summaries, deadlines, action items and quizzes — locally on your device.</p>
+      <div class="status"><i id="dot"></i><span id="status">Checking QVAC…</span></div>
+    </header>
+
+    <section class="grid">
+      <section class="panel input-panel">
+        <div class="section-title">
+          <div>
+            <small>STEP 01</small>
+            <h2>Add a document</h2>
+          </div>
+          <span class="local-badge">LOCAL</span>
+        </div>
+
+        <label class="drop" for="file">
+          <div class="drop-icon">📄</div>
+          <strong>Choose a .txt notice</strong>
+          <span id="filename">or use the sample document</span>
+          <input id="file" type="file" accept=".txt,text/plain">
+        </label>
+
+        <div class="or"><span>OR PASTE TEXT</span></div>
+
+        <textarea id="text" placeholder="Paste a college notice here..."></textarea>
+
+        <button id="sample" class="secondary">Load Sample Notice</button>
+        <button id="analyze" class="primary">Analyze with Local AI →</button>
+
+        <p class="privacy">🔒 Your document is processed by QVAC on this machine. No cloud AI API is used.</p>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="section-title">
+          <div>
+            <small>STEP 02</small>
+            <h2>Student Action Board</h2>
+          </div>
+          <span id="model" class="model">Waiting</span>
+        </div>
+
+        <div id="empty" class="empty">
+          <div>🧠</div>
+          <h3>Ready for local analysis</h3>
+          <p>Upload or paste a notice, then run QVAC to see the result here.</p>
+        </div>
+
+        <pre id="output" hidden></pre>
+      </section>
+    </section>
+
+    <footer>
+      <strong>CampusLens-QVAC</strong> · @qvac SDK 0.20.0 · <code>loadModel()</code> + <code>completion()</code>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
